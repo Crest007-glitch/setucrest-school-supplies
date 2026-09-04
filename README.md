@@ -7,7 +7,7 @@ Static, GitHub Pages–compatible website for school and institutional supplies 
 - Responsive semantic HTML landing page
 - SEO title, description, canonical URL, robots.txt and sitemap.xml
 - Organization structured data
-- Browser-independent Zoho Forms enquiry form
+- Zoho Forms enquiry form
 - WhatsApp and direct contact links
 - WhatsApp enquiry QR code
 - Realistic category images for classroom supplies, laboratory equipment, and art/sports supplies
