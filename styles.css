@@ -281,3 +281,12 @@ h1 span { color: #8debd0; }
   .detail-faq-list summary { font-size: .9rem; }
   .detail-cta { padding: 61px 0; }
 }
+
+
+/* Full clickable category cards */
+.category-card-link { color: inherit; text-decoration: none; cursor: pointer; }
+.category-card-link:hover { transform: translateY(-4px); box-shadow: 0 18px 35px rgba(11,36,71,.1); }
+.category-card-link:focus-visible { outline: 3px solid rgba(20,186,208,.8); outline-offset: 4px; }
+.category-card-link .category-card-action { display: inline-flex; align-items: center; gap: 8px; margin-top: auto; color: var(--green-dark); font-size: .83rem; font-weight: 800; }
+.category-card-featured.category-card-link .category-card-action { color: var(--green); }
+.category-card-link .category-card-action span { font-weight: 700; }
