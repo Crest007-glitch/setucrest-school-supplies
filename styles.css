@@ -162,7 +162,8 @@ h1 span { color: #8debd0; }
 .contact-avatar { display: grid; place-items: center; width: 49px; height: 49px; color: var(--navy); background: var(--green); border-radius: 50%; font-size: .88rem; font-weight: 850; }
 .contact-card p, .contact-card h3 { margin: 0; }.contact-label { color: rgba(255,255,255,.5); font-size: .71rem; font-weight: 750; letter-spacing: .08em; text-transform: uppercase; }.contact-card h3 { color: var(--white); font-size: 1rem; }.contact-card a { display: inline-block; margin-right: 13px; color: #9ee9d4; font-size: .82rem; }.contact-card a:hover { color: var(--white); }
 .contact-details { min-width: 0; }
-.contact-details a { margin-top: 3px; }
+.contact-links { display: grid; gap: 5px; margin-top: 8px; }
+.contact-links a { width: fit-content; margin: 0; }
 .contact-whatsapp { display: inline-flex !important; align-items: center; gap: 7px; margin-top: 9px !important; color: var(--green) !important; font-weight: 800; }
 .whatsapp-mark { display: inline-grid; place-items: center; width: 22px; height: 22px; color: var(--navy); background: var(--green); border-radius: 50%; font-size: .8rem; }
 .contact-qr { display: block; margin: 0 !important; }
