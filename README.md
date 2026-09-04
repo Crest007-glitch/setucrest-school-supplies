@@ -10,7 +10,7 @@ Static, GitHub Pages–compatible website for school and institutional supplies 
 - Zoho Forms enquiry form
 - WhatsApp and direct contact links
 - WhatsApp enquiry QR code
-- Realistic category images for classroom supplies, laboratory equipment, and art/sports supplies
+- Realistic category images for all seven supply categories
 - `CNAME` for `school-supplies.setucrestglobal.com`
 - SetuCrest logo and institutional supplies brochure
 
