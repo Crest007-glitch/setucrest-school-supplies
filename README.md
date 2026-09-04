@@ -22,3 +22,13 @@ Static, GitHub Pages–compatible website for school and institutional supplies 
 4. Enable **Enforce HTTPS** after GitHub finishes the certificate check.
 
 The enquiry form is hosted by Zoho Forms and embedded in the page, so visitors do not need Outlook or another email application. WhatsApp is provided as a direct link and QR-code alternative.
+
+## SEO category pages
+
+The site includes dedicated landing pages for:
+
+- School stationery and classroom supplies
+- School laboratory equipment
+- School furniture and classroom requirements
+
+Each page has a unique title, description, canonical URL, structured data, internal links and a quotation CTA.

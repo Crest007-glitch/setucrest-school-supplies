@@ -204,3 +204,80 @@ h1 span { color: #8debd0; }
   .faq-grid { grid-template-columns: 1fr; gap: 37px; }.faq-list summary { font-size: .9rem; }.faq-list details p { font-size: .82rem; }
   .footer-main { grid-template-columns: 1fr 1fr; gap: 35px 22px; padding-top: 50px; }.footer-main > div:first-child { grid-column: span 2; }.footer-bottom { display: block; }.footer-bottom span { display: block; margin-bottom: 7px; }
 }
+
+
+/* SEO category pages */
+.detail-hero { padding: 31px 0 92px; color: var(--white); background: var(--navy); }
+.breadcrumbs { display: flex; flex-wrap: wrap; align-items: center; gap: 9px; margin-bottom: 53px; color: rgba(255,255,255,.56); font-size: .76rem; }
+.breadcrumbs a { color: rgba(255,255,255,.78); }
+.breadcrumbs a:hover { color: var(--green); }
+.detail-hero-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(360px, .84fr); gap: 78px; align-items: center; }
+.detail-copy { max-width: 690px; }
+.detail-copy h1 { max-width: 700px; margin-bottom: 23px; color: var(--white); font-size: clamp(2.75rem, 5.3vw, 5rem); letter-spacing: -.055em; line-height: 1.02; }
+.detail-lede { max-width: 625px; margin-bottom: 30px; color: rgba(255,255,255,.72); font-size: 1.08rem; line-height: 1.75; }
+.detail-note { margin: 22px 0 0; color: rgba(255,255,255,.48); font-size: .78rem; line-height: 1.6; }
+.detail-image { margin: 0; overflow: hidden; background: #153b61; border: 1px solid rgba(255,255,255,.18); border-radius: var(--radius); box-shadow: 0 24px 60px rgba(0,0,0,.25); }
+.detail-image img { display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: cover; }
+.detail-image figcaption { padding: 13px 16px 15px; color: rgba(255,255,255,.63); background: rgba(0,0,0,.16); font-size: .74rem; line-height: 1.5; }
+.detail-intro { padding-bottom: 42px; }
+.detail-intro-grid { display: grid; grid-template-columns: minmax(250px, .8fr) minmax(0, 1.2fr); gap: 100px; align-items: end; }
+.detail-intro h2, .detail-content h2 { max-width: 610px; }
+.detail-intro-copy { max-width: 620px; margin: 0; color: var(--muted); font-size: 1rem; line-height: 1.8; }
+.detail-content { padding-top: 42px; }
+.detail-card-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-top: 43px; }
+.detail-card { display: flex; flex-direction: column; min-height: 300px; padding: 28px 26px 25px; background: var(--white); border: 1px solid var(--line); border-radius: var(--radius); box-shadow: 0 11px 28px rgba(11,36,71,.05); }
+.detail-card-number { margin-bottom: 26px; color: var(--green-dark); font-size: .71rem; font-weight: 850; letter-spacing: .11em; }
+.detail-card h3 { margin-bottom: 11px; color: var(--navy); font-size: 1.2rem; letter-spacing: -.025em; line-height: 1.2; }
+.detail-card p { margin-bottom: 16px; color: var(--muted); font-size: .87rem; line-height: 1.65; }
+.detail-list { display: grid; gap: 8px; margin: auto 0 0; padding: 0; color: var(--ink); font-size: .82rem; line-height: 1.5; list-style: none; }
+.detail-list li { position: relative; padding-left: 18px; }
+.detail-list li::before { content: "•"; position: absolute; left: 0; color: var(--green-dark); font-weight: 900; }
+.detail-check-section { margin-top: 82px; padding: 40px 42px; background: var(--soft); border: 1px solid var(--line); border-radius: var(--radius); }
+.detail-check-section h2 { margin-bottom: 10px; font-size: 2rem; }
+.detail-check-section > p { max-width: 680px; margin-bottom: 25px; color: var(--muted); line-height: 1.7; }
+.detail-check-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+.detail-check { padding: 20px; background: var(--white); border-radius: 12px; }
+.detail-check strong { display: block; margin-bottom: 6px; color: var(--navy); font-size: .91rem; }
+.detail-check span { display: block; color: var(--muted); font-size: .82rem; line-height: 1.55; }
+.detail-faq { margin-top: 82px; }
+.detail-faq h2 { margin-bottom: 26px; }
+.detail-faq-list { max-width: 850px; border-top: 1px solid var(--line); }
+.detail-faq-list details { border-bottom: 1px solid var(--line); }
+.detail-faq-list summary { display: flex; justify-content: space-between; gap: 20px; padding: 20px 0; color: var(--navy); font-weight: 750; cursor: pointer; list-style: none; }
+.detail-faq-list summary::-webkit-details-marker { display: none; }
+.detail-faq-list summary::after { content: "+"; color: var(--green-dark); font-size: 1.35rem; font-weight: 400; }
+.detail-faq-list details[open] summary::after { content: "–"; }
+.detail-faq-list details p { max-width: 770px; margin: -2px 0 20px; color: var(--muted); font-size: .88rem; line-height: 1.7; }
+.detail-related { margin-top: 82px; }
+.detail-related h2 { margin-bottom: 19px; font-size: 2rem; }
+.related-links { display: flex; flex-wrap: wrap; gap: 12px; }
+.related-links a { display: inline-flex; align-items: center; gap: 9px; padding: 12px 16px; color: var(--green-dark); background: #e8f7f1; border-radius: 9px; font-size: .83rem; font-weight: 800; }
+.related-links a:hover { color: var(--navy); background: #d5f1e7; }
+.detail-cta { padding: 76px 0; color: var(--white); background: var(--navy); }
+.detail-cta-grid { display: flex; align-items: center; justify-content: space-between; gap: 40px; }
+.detail-cta h2 { max-width: 620px; margin: 0; color: var(--white); font-size: clamp(2rem, 4vw, 3.3rem); }
+.detail-cta p { max-width: 520px; margin: 13px 0 0; color: rgba(255,255,255,.66); line-height: 1.7; }
+.detail-cta .button { flex: 0 0 auto; }
+
+@media (max-width: 980px) {
+  .detail-hero-grid { grid-template-columns: 1fr; gap: 42px; }
+  .detail-copy { max-width: 700px; }
+  .detail-image { max-width: 620px; }
+  .detail-intro-grid { grid-template-columns: 1fr; gap: 18px; }
+  .detail-card-grid { grid-template-columns: 1fr 1fr; }
+  .detail-card:last-child { grid-column: span 2; }
+  .detail-check-grid { grid-template-columns: 1fr 1fr; }
+  .detail-cta-grid { align-items: flex-start; flex-direction: column; }
+}
+@media (max-width: 700px) {
+  .detail-hero { padding-bottom: 67px; }
+  .breadcrumbs { margin-bottom: 35px; font-size: .7rem; }
+  .detail-copy h1 { font-size: clamp(2.35rem, 12vw, 3.55rem); }
+  .detail-lede { font-size: .97rem; }
+  .detail-card-grid, .detail-check-grid { grid-template-columns: 1fr; }
+  .detail-card, .detail-card:last-child { grid-column: auto; min-height: 0; }
+  .detail-check-section { margin-top: 58px; padding: 28px 21px; }
+  .detail-faq, .detail-related { margin-top: 58px; }
+  .detail-faq-list summary { font-size: .9rem; }
+  .detail-cta { padding: 61px 0; }
+}
