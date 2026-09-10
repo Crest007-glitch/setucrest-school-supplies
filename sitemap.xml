@@ -2,25 +2,38 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://school-supplies.setucrestglobal.com/</loc>
-    <lastmod>2026-09-04</lastmod>
+    <lastmod>2026-09-10</lastmod>
   </url>
   <url>
-    <loc>https://school-supplies.setucrestglobal.com/school-stationery-classroom-supplies-delhi-ncr/</loc>
-    <lastmod>2026-09-04</lastmod>
+    <loc>https://school-supplies.setucrestglobal.com/resources/</loc>
+    <lastmod>2026-09-10</lastmod>
   </url>
   <url>
-    <loc>https://school-supplies.setucrestglobal.com/school-laboratory-equipment-delhi-ncr/</loc>
-    <lastmod>2026-09-07</lastmod>
-  </url>
-  <url>
-    <loc>https://school-supplies.setucrestglobal.com/school-laboratory-equipment/</loc>
-    <lastmod>2026-09-07</lastmod>
+    <loc>https://school-supplies.setucrestglobal.com/school-art-craft-supplies-delhi-ncr/</loc>
+    <lastmod>2026-09-10</lastmod>
   </url>
   <url>
     <loc>https://school-supplies.setucrestglobal.com/school-furniture-delhi-ncr/</loc>
-    <lastmod>2026-09-04</lastmod>
+    <lastmod>2026-09-10</lastmod>
   </url>
-  <url><loc>https://school-supplies.setucrestglobal.com/school-sports-equipment-delhi-ncr/</loc><lastmod>2026-09-06</lastmod></url>
-  <url><loc>https://school-supplies.setucrestglobal.com/school-whiteboards-notice-boards-delhi-ncr/</loc><lastmod>2026-09-06</lastmod></url>
-  <url><loc>https://school-supplies.setucrestglobal.com/school-art-craft-supplies-delhi-ncr/</loc><lastmod>2026-09-06</lastmod></url>
+  <url>
+    <loc>https://school-supplies.setucrestglobal.com/school-laboratory-equipment/</loc>
+    <lastmod>2026-09-10</lastmod>
+  </url>
+  <url>
+    <loc>https://school-supplies.setucrestglobal.com/school-laboratory-equipment-delhi-ncr/</loc>
+    <lastmod>2026-09-10</lastmod>
+  </url>
+  <url>
+    <loc>https://school-supplies.setucrestglobal.com/school-sports-equipment-delhi-ncr/</loc>
+    <lastmod>2026-09-10</lastmod>
+  </url>
+  <url>
+    <loc>https://school-supplies.setucrestglobal.com/school-stationery-classroom-supplies-delhi-ncr/</loc>
+    <lastmod>2026-09-10</lastmod>
+  </url>
+  <url>
+    <loc>https://school-supplies.setucrestglobal.com/school-whiteboards-notice-boards-delhi-ncr/</loc>
+    <lastmod>2026-09-10</lastmod>
+  </url>
 </urlset>

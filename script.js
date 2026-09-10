@@ -27,6 +27,7 @@
     if (href.includes('wa.me/')) { eventName = 'generate_lead'; method = 'whatsapp'; }
     else if (href.startsWith('mailto:')) { eventName = 'generate_lead'; method = 'email'; }
     else if (href.startsWith('tel:')) { eventName = 'generate_lead'; method = 'phone'; }
+    else if (link.hasAttribute('download') && /\.txt$/.test(href)) { eventName = 'download_requirement_template'; method = 'requirement_template'; }
     else if (href.endsWith('.pdf')) { eventName = 'file_download'; method = 'brochure'; }
     else if (href.includes('school-') && href.includes('delhi-ncr')) { eventName = 'select_content'; method = 'category_page'; }
     if (eventName) window.gtag('event', eventName, { method: method, link_url: link.href, link_text: (link.textContent || '').trim().slice(0, 100) });

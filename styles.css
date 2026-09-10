@@ -290,3 +290,21 @@ h1 span { color: #8debd0; }
 .category-card-link .category-card-action { display: inline-flex; align-items: center; gap: 8px; margin-top: auto; color: var(--green-dark); font-size: .83rem; font-weight: 800; }
 .category-card-featured.category-card-link .category-card-action { color: var(--green); }
 .category-card-link .category-card-action span { font-weight: 700; }
+
+/* Buying guidance and downloadable requirement templates */
+.buying-guide{margin:3.5rem 0;color:var(--ink,#10213a);font-size:1rem;line-height:1.7}
+.buying-guide h2{color:var(--navy,#071b35);font-size:clamp(1.65rem,3vw,2.2rem);line-height:1.2;margin:0 0 1rem;letter-spacing:-.025em}
+.buying-guide h3{font-size:1.15rem;margin:1.6rem 0 .6rem;color:var(--navy,#071b35)}
+.buying-guide p{max-width:78ch;margin:0 0 1rem}.buying-guide ul,.buying-guide ol{padding-left:1.4rem}.buying-guide li{margin:.55rem 0}
+.buying-table-wrap{max-width:100%;overflow-x:auto;margin:1.5rem 0;border:1px solid var(--line,#dbe4ef);border-radius:12px}
+.buying-table{width:100%;border-collapse:collapse;font-size:1rem;line-height:1.6;text-align:left}
+.buying-table caption{text-align:left;padding:1rem;font-weight:700;background:var(--soft,var(--pale,#eef4fb));color:var(--navy,#071b35)}
+.buying-table th,.buying-table td{padding:1rem;vertical-align:top;border-bottom:1px solid var(--line,#dbe4ef);min-width:10rem}
+.buying-table thead th{background:#f5f8fc}.buying-table tbody th{font-weight:700;width:25%}.buying-table tr:last-child>*{border-bottom:0}
+.buying-links{display:flex;flex-wrap:wrap;gap:.75rem;margin:1.3rem 0}
+.buying-links a{display:inline-block;padding:.8rem 1rem;border:1px solid var(--line,#dbe4ef);border-radius:9px;color:var(--green-dark,var(--blue,#0c56d7));background:#fff;font-size:1rem;font-weight:700;line-height:1.5;text-decoration:underline;text-underline-offset:3px}
+.buying-links a:hover{background:var(--soft,var(--pale,#eef4fb))}.buying-guide a:focus-visible,.buying-table-wrap:focus-visible,.buying-links a:focus-visible{outline:3px solid #0c56d7;outline-offset:4px}
+.buying-cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1.2rem}.buying-card{padding:1.5rem;border:1px solid var(--line,#dbe4ef);border-radius:14px;background:#fff;min-width:0}.buying-card h3{margin-top:0}.buying-card>a{color:var(--green-dark,var(--blue,#0c56d7));text-decoration:underline;font-weight:700}
+.buying-hub{padding:clamp(3rem,6vw,6rem) clamp(22px,7vw,108px);background:var(--pale,#eef4fb)}.buying-hub .buying-guide{max-width:1160px;margin:0 auto}
+@media(max-width:700px){.buying-cards{grid-template-columns:1fr}.buying-card{padding:1.2rem}.buying-guide{margin:2.5rem 0}.buying-table th,.buying-table td{padding:.8rem}.buying-links a{width:100%}}
+@media print{.buying-table-wrap{overflow:visible}.buying-links a{border:0;padding:0}.buying-card{break-inside:avoid}}
