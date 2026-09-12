@@ -40,10 +40,12 @@ class Page(HTMLParser):
         self.skip = None
         self.schema = False
         self.schema_text = ''
+        self.elements = []
         self.feed(text)
 
     def handle_starttag(self, tag, attrs):
         a = dict(attrs)
+        self.elements.append((tag, a))
         if tag == 'script':
             self.schema = a.get('type') == 'application/ld+json'
             self.schema_text = ''
@@ -174,17 +176,77 @@ def update_sitemap(as_of):
         node = ET.SubElement(root, f'{{{NS}}}url')
         ET.SubElement(node, f'{{{NS}}}loc').text = url
         ET.SubElement(node, f'{{{NS}}}lastmod').text = lastmod
-        # Product reference photographs appear in crawlable <img> elements.
-        # Image sitemaps also support images served by a separate CDN host.
-        image_urls = sorted({urljoin(url, token[1]) for token in page.tokens
-                             if token[0] == 'img' and ('/assets/products/' in token[1]
-                             or urlsplit(token[1]).netloc in {'thumb.wikimedia.org', 'upload.wikimedia.org'})})
-        for image_url in image_urls:
+        for image_url in page_images(url, page):
             image_node = ET.SubElement(node, f'{{{IMAGE_NS}}}image')
             ET.SubElement(image_node, f'{{{IMAGE_NS}}}loc').text = image_url
     ET.indent(root, space='  ')
     (ROOT / 'sitemap.xml').write_text('<?xml version="1.0" encoding="UTF-8"?>\n' + ET.tostring(root, encoding='unicode') + '\n')
     print(f'Sitemap updated: {len(root)} canonical pages; unchanged dates preserved.')
+
+
+def page_images(url, page):
+    """Include content photographs, excluding brand marks and utility QR images."""
+    return sorted({urljoin(url, token[1]) for token in page.tokens
+                   if token[0] == 'img' and not any(name in token[1]
+                       for name in ('setucrest-logo', 'whatsapp-qr'))})
+
+
+def check_page_content(current):
+    titles, descriptions = set(), set()
+    inbound = {url: set() for url in current}
+    for url, (path, page) in current.items():
+        if page.title in titles or page.description in descriptions:
+            raise ValueError(f'Duplicate title or meta description: {url}')
+        titles.add(page.title)
+        descriptions.add(page.description)
+        if sum(tag == 'h1' for tag, _ in page.elements) != 1:
+            raise ValueError(f'Expected one H1: {url}')
+        canonicals = [a for tag, a in page.elements if tag == 'link' and a.get('rel') == 'canonical']
+        if len(canonicals) != 1:
+            raise ValueError(f'Expected one canonical tag: {url}')
+        ids = [a['id'] for _, a in page.elements if 'id' in a]
+        if len(ids) != len(set(ids)):
+            raise ValueError(f'Duplicate element IDs: {url}')
+        for tag, attrs in page.elements:
+            if tag == 'script' and attrs.get('src') and not ({'async', 'defer'} & attrs.keys()):
+                raise ValueError(f'Render-blocking script: {url}')
+            if tag == 'img':
+                src = attrs.get('src', '')
+                if not attrs.get('alt') or not all(attrs.get(k, '').isdigit() and int(attrs[k]) > 0 for k in ('width', 'height')):
+                    raise ValueError(f'Missing image description/dimensions: {url}: {src}')
+                if urlsplit(src).path.lower().endswith(('.jpg', '.jpeg', '.png')):
+                    raise ValueError(f'Use an optimized WebP image: {url}: {src}')
+                if 'setucrest-logo' not in src and attrs.get('fetchpriority') != 'high' and attrs.get('loading') != 'lazy':
+                    raise ValueError(f'Below-fold image needs lazy loading: {url}: {src}')
+            attr = 'src' if tag in {'img', 'script', 'iframe'} else 'href' if tag in {'a', 'link'} else None
+            if not attr or not attrs.get(attr):
+                continue
+            target = urlsplit(urljoin(url, attrs[attr]))
+            if tag == 'a' and (target.netloc == 'wa.me' or target.scheme == 'tel'):
+                digits = re.sub(r'\D', '', target.path)
+                if digits != '919821068129':
+                    raise ValueError(f'Incorrect contact number: {url}: {attrs[attr]}')
+            if target.netloc != host():
+                continue
+            local = ROOT / target.path.lstrip('/')
+            if local.is_dir():
+                local /= 'index.html'
+            if not local.is_file():
+                raise ValueError(f'Missing internal target: {url}: {attrs[attr]}')
+            if '/assets/products/' in target.path and local.stat().st_size >= 100000:
+                raise ValueError(f'Product image must be under 100 KB: {local}')
+            canonical = f'https://{host()}{target.path}'
+            if tag == 'a' and canonical in inbound and canonical != url:
+                inbound[canonical].add(url)
+    for url, sources in inbound.items():
+        if len(sources) < 2:
+            raise ValueError(f'Page needs links from at least two other pages: {url}')
+    sitemap = ET.parse(ROOT / 'sitemap.xml').getroot()
+    for node in sitemap.findall(f'{{{NS}}}url'):
+        url = node.findtext(f'{{{NS}}}loc')
+        images = [n.findtext(f'{{{IMAGE_NS}}}loc') for n in node.findall(f'{{{IMAGE_NS}}}image')]
+        if images != page_images(url, current[url][1]):
+            raise ValueError(f'Stale image sitemap: {url}; run the sitemap command.')
 
 
 def check():
@@ -194,6 +256,7 @@ def check():
     for url, lastmod in entries.items():
         if not lastmod or date.fromisoformat(lastmod) > date.today():
             raise ValueError(f'Invalid/future lastmod for {url}: {lastmod}')
+    check_page_content(current)
     config = json.loads((ROOT / 'indexnow.json').read_text())
     key = config['key']
     if not re.fullmatch(r'[a-zA-Z0-9-]{8,128}', key):
