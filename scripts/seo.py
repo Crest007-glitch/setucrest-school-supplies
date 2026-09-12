@@ -15,12 +15,13 @@ import subprocess
 import sys
 import time
 from urllib.error import HTTPError, URLError
-from urllib.parse import urlsplit
+from urllib.parse import urljoin, urlsplit
 from urllib.request import Request, urlopen
 import xml.etree.ElementTree as ET
 
 ROOT = Path(__file__).resolve().parents[1]
 NS = 'http://www.sitemaps.org/schemas/sitemap/0.9'
+IMAGE_NS = 'http://www.google.com/schemas/sitemap-image/1.1'
 
 
 def git(*args):
@@ -163,6 +164,7 @@ def update_sitemap(as_of):
     today = date.fromisoformat(as_of) if as_of else date.today()
     old = sitemap_entries()
     ET.register_namespace('', NS)
+    ET.register_namespace('image', IMAGE_NS)
     root = ET.Element(f'{{{NS}}}urlset')
     for url, (path, page) in pages().items():
         relative = path.relative_to(ROOT).as_posix()
@@ -172,6 +174,14 @@ def update_sitemap(as_of):
         node = ET.SubElement(root, f'{{{NS}}}url')
         ET.SubElement(node, f'{{{NS}}}loc').text = url
         ET.SubElement(node, f'{{{NS}}}lastmod').text = lastmod
+        # Product reference photographs appear in crawlable <img> elements.
+        # Image sitemaps also support images served by a separate CDN host.
+        image_urls = sorted({urljoin(url, token[1]) for token in page.tokens
+                             if token[0] == 'img' and ('/assets/products/' in token[1]
+                             or urlsplit(token[1]).netloc in {'thumb.wikimedia.org', 'upload.wikimedia.org'})})
+        for image_url in image_urls:
+            image_node = ET.SubElement(node, f'{{{IMAGE_NS}}}image')
+            ET.SubElement(image_node, f'{{{IMAGE_NS}}}loc').text = image_url
     ET.indent(root, space='  ')
     (ROOT / 'sitemap.xml').write_text('<?xml version="1.0" encoding="UTF-8"?>\n' + ET.tostring(root, encoding='unicode') + '\n')
     print(f'Sitemap updated: {len(root)} canonical pages; unchanged dates preserved.')

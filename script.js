@@ -30,7 +30,7 @@
     else if (link.hasAttribute('download') && /\.txt$/.test(href)) { eventName = 'download_requirement_template'; method = 'requirement_template'; }
     else if (href.endsWith('.pdf')) { eventName = 'file_download'; method = 'brochure'; }
     else if (href.includes('school-') && href.includes('delhi-ncr')) { eventName = 'select_content'; method = 'category_page'; }
-    if (eventName) window.gtag('event', eventName, { method: method, link_url: link.href, link_text: (link.textContent || '').trim().slice(0, 100) });
+    if (eventName) window.gtag('event', eventName, { method: method, product_name: link.dataset.product || undefined, link_url: link.href, link_text: (link.textContent || '').trim().slice(0, 100) });
   });
 
 }());

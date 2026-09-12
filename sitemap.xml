@@ -1,12 +1,49 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://school-supplies.setucrestglobal.com/</loc>
-    <lastmod>2026-09-10</lastmod>
+    <lastmod>2026-09-12</lastmod>
   </url>
   <url>
     <loc>https://school-supplies.setucrestglobal.com/resources/</loc>
-    <lastmod>2026-09-10</lastmod>
+    <lastmod>2026-09-12</lastmod>
+  </url>
+  <url>
+    <loc>https://school-supplies.setucrestglobal.com/resources/school-laboratory-equipment-list/</loc>
+    <lastmod>2026-09-12</lastmod>
+    <image:image>
+      <image:loc>https://thumb.wikimedia.org/wikipedia/commons/thumb/1/12/Beakers.jpg/960px-Beakers.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://thumb.wikimedia.org/wikipedia/commons/thumb/1/18/Caliper_detail_view.jpeg/960px-Caliper_detail_view.jpeg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://thumb.wikimedia.org/wikipedia/commons/thumb/2/20/Micrometers.jpg/960px-Micrometers.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://thumb.wikimedia.org/wikipedia/commons/thumb/5/50/Magnifying_glass2.jpg/960px-Magnifying_glass2.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://thumb.wikimedia.org/wikipedia/commons/thumb/7/78/250_mL_Erlenmeyer_flask.jpg/960px-250_mL_Erlenmeyer_flask.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7e/Microscope_-_school_laboratory_%281%29.jpg/500px-Microscope_-_school_laboratory_%281%29.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ab/MicroscopeSlides.jpg/960px-MicroscopeSlides.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://upload.wikimedia.org/wikipedia/commons/1/12/Photo_of_glass_prism..jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://upload.wikimedia.org/wikipedia/commons/4/4f/Weeghaak.JPG</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://upload.wikimedia.org/wikipedia/commons/a/a2/Two_small_test_tubes_held_in_spring_clamps.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://upload.wikimedia.org/wikipedia/commons/c/c5/Different_types_of_graduated_cylinder-_10ml%2C_25ml%2C_50ml_and_100_ml_graduated_cylinder.jpg</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://school-supplies.setucrestglobal.com/school-art-craft-supplies-delhi-ncr/</loc>
@@ -14,15 +51,72 @@
   </url>
   <url>
     <loc>https://school-supplies.setucrestglobal.com/school-furniture-delhi-ncr/</loc>
-    <lastmod>2026-09-10</lastmod>
+    <lastmod>2026-09-12</lastmod>
+    <image:image>
+      <image:loc>https://thumb.wikimedia.org/wikipedia/commons/thumb/c/ce/Elementary_classroom_in_Alaska.jpg/960px-Elementary_classroom_in_Alaska.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f5/Plastic_stacking_chairs_designed_by_Robin_Day.jpg/960px-Plastic_stacking_chairs_designed_by_Robin_Day.jpg</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://school-supplies.setucrestglobal.com/school-laboratory-equipment/</loc>
-    <lastmod>2026-09-10</lastmod>
+    <lastmod>2026-09-12</lastmod>
+    <image:image>
+      <image:loc>https://thumb.wikimedia.org/wikipedia/commons/thumb/1/12/Beakers.jpg/960px-Beakers.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://thumb.wikimedia.org/wikipedia/commons/thumb/1/18/Caliper_detail_view.jpeg/960px-Caliper_detail_view.jpeg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://thumb.wikimedia.org/wikipedia/commons/thumb/7/78/250_mL_Erlenmeyer_flask.jpg/960px-250_mL_Erlenmeyer_flask.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7e/Microscope_-_school_laboratory_%281%29.jpg/500px-Microscope_-_school_laboratory_%281%29.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ab/MicroscopeSlides.jpg/960px-MicroscopeSlides.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://upload.wikimedia.org/wikipedia/commons/c/c5/Different_types_of_graduated_cylinder-_10ml%2C_25ml%2C_50ml_and_100_ml_graduated_cylinder.jpg</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://school-supplies.setucrestglobal.com/school-laboratory-equipment-delhi-ncr/</loc>
-    <lastmod>2026-09-10</lastmod>
+    <lastmod>2026-09-12</lastmod>
+    <image:image>
+      <image:loc>https://thumb.wikimedia.org/wikipedia/commons/thumb/1/12/Beakers.jpg/960px-Beakers.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://thumb.wikimedia.org/wikipedia/commons/thumb/1/18/Caliper_detail_view.jpeg/960px-Caliper_detail_view.jpeg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://thumb.wikimedia.org/wikipedia/commons/thumb/2/20/Micrometers.jpg/960px-Micrometers.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://thumb.wikimedia.org/wikipedia/commons/thumb/5/50/Magnifying_glass2.jpg/960px-Magnifying_glass2.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://thumb.wikimedia.org/wikipedia/commons/thumb/7/78/250_mL_Erlenmeyer_flask.jpg/960px-250_mL_Erlenmeyer_flask.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7e/Microscope_-_school_laboratory_%281%29.jpg/500px-Microscope_-_school_laboratory_%281%29.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ab/MicroscopeSlides.jpg/960px-MicroscopeSlides.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://upload.wikimedia.org/wikipedia/commons/1/12/Photo_of_glass_prism..jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://upload.wikimedia.org/wikipedia/commons/4/4f/Weeghaak.JPG</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://upload.wikimedia.org/wikipedia/commons/a/a2/Two_small_test_tubes_held_in_spring_clamps.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://upload.wikimedia.org/wikipedia/commons/c/c5/Different_types_of_graduated_cylinder-_10ml%2C_25ml%2C_50ml_and_100_ml_graduated_cylinder.jpg</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://school-supplies.setucrestglobal.com/school-sports-equipment-delhi-ncr/</loc>
@@ -30,10 +124,37 @@
   </url>
   <url>
     <loc>https://school-supplies.setucrestglobal.com/school-stationery-classroom-supplies-delhi-ncr/</loc>
-    <lastmod>2026-09-10</lastmod>
+    <lastmod>2026-09-12</lastmod>
+    <image:image>
+      <image:loc>https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0f/15_reams_of_paper_stacked_on_the_floor.jpg/960px-15_reams_of_paper_stacked_on_the_floor.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a0/Yellow_folder.JPG/960px-Yellow_folder.JPG</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e1/03-BICcristal2008-03-26.jpg/960px-03-BICcristal2008-03-26.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e4/Felt-tip_Pens_%E3%82%B5%E3%82%A4%E3%83%B3%E3%83%9A%E3%83%B3_%28195_365_561%29_%2814677359473%29.jpg/960px-Felt-tip_Pens_%E3%82%B5%E3%82%A4%E3%83%B3%E3%83%9A%E3%83%B3_%28195_365_561%29_%2814677359473%29.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ea/Notebooks.jpg/960px-Notebooks.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://upload.wikimedia.org/wikipedia/commons/0/08/Pencils_hb.jpg</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://school-supplies.setucrestglobal.com/school-whiteboards-notice-boards-delhi-ncr/</loc>
-    <lastmod>2026-09-10</lastmod>
+    <lastmod>2026-09-12</lastmod>
+    <image:image>
+      <image:loc>https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1a/BlankChalkboard.JPG/960px-BlankChalkboard.JPG</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1f/Bulletin_Board_Texture.jpg/960px-Bulletin_Board_Texture.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f6/Whiteboard_with_markers.jpg/960px-Whiteboard_with_markers.jpg</image:loc>
+    </image:image>
   </url>
 </urlset>
