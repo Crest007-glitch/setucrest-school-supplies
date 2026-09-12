@@ -4,7 +4,7 @@
 Standard library only. Run `python scripts/seo.py --help` from the repository.
 """
 import argparse
-from datetime import date
+from datetime import date, datetime, timezone
 from hashlib import sha256
 from html.parser import HTMLParser
 import json
@@ -163,7 +163,7 @@ def significant_paths(base, head):
 
 
 def update_sitemap(as_of):
-    today = date.fromisoformat(as_of) if as_of else date.today()
+    today = date.fromisoformat(as_of) if as_of else datetime.now(timezone.utc).date()
     old = sitemap_entries()
     ET.register_namespace('', NS)
     ET.register_namespace('image', IMAGE_NS)
@@ -254,7 +254,7 @@ def check():
     if set(current) != set(entries):
         raise ValueError(f'Sitemap mismatch. Missing: {set(current)-set(entries)}; extra: {set(entries)-set(current)}')
     for url, lastmod in entries.items():
-        if not lastmod or date.fromisoformat(lastmod) > date.today():
+        if not lastmod or date.fromisoformat(lastmod) > datetime.now(timezone.utc).date():
             raise ValueError(f'Invalid/future lastmod for {url}: {lastmod}')
     check_page_content(current)
     config = json.loads((ROOT / 'indexnow.json').read_text())
