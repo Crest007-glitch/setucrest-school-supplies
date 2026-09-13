@@ -1,0 +1,28 @@
+.guide-content { padding-bottom: 1rem; }
+.guide-content a:not(.button) { text-decoration: underline; text-underline-offset: .2em; }
+.guide-content section { scroll-margin-top: 110px; }
+.guide-content [hidden] { display: none !important; }
+.guide-content .source-note { font-size: .86rem; color: #4c5f76; }
+.lab-filters { display: grid; grid-template-columns: minmax(200px, 2fr) minmax(120px, 1fr) minmax(180px, 1.4fr) auto; gap: 18px; padding: 24px; background: #eef5f8; border: 1px solid #dfe7ef; border-radius: 16px; align-items: end; }
+.lab-filters label { display: block; margin-bottom: 7px; font-weight: 700; font-size: .9rem; }
+.lab-filters input, .lab-filters select { width: 100%; min-width: 0; min-height: 48px; padding: 10px 12px; border: 1px solid #8a9caf; border-radius: 8px; background: white; color: #142238; }
+.lab-filters :focus-visible { outline: 3px solid #0c56d7; outline-offset: 3px; }
+.lab-reset { min-height: 48px; color: white; background: #0b2447; }
+#lab-count { grid-column: 1 / -1; margin: 0; font-size: .9rem; }
+#lab-empty { padding: 1rem; background: #fff3d5; border-radius: 8px; }
+.equipment-table tbody th { width: 25%; }
+.equipment-table td:nth-child(3), .equipment-table th:nth-child(3) { min-width: 6rem; width: 10%; }
+.quote-panel { padding: clamp(22px,4vw,40px); background: #eef7f5; border: 1px solid #c5e5dc; border-radius: 18px; }
+@media (max-width: 980px) { .lab-filters { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 600px) {
+  .lab-filters { grid-template-columns: 1fr; padding: 18px; }
+  .equipment-table thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
+  .equipment-table, .equipment-table tbody, .equipment-table tr, .equipment-table th, .equipment-table td { display: block; width: 100% !important; min-width: 0 !important; }
+  .equipment-table caption { display: block; }
+  .equipment-table tbody th { padding-bottom: .6rem; background: #f1f6fa; }
+  .equipment-table td { padding: .6rem .8rem; border-bottom: 0; }
+  .equipment-table td::before { content: attr(data-label) ': '; font-weight: 700; }
+  .equipment-table tr { border-bottom: 2px solid #dfe7ef; padding-bottom: .8rem; }
+  .equipment-table tr:last-child { border-bottom: 0; }
+}
+@media print { .lab-filters, #lab-count, #lab-empty { display: none !important; } .guide-content .inventory-section[hidden], .guide-content tr[hidden] { display: revert !important; } .equipment-table tr { break-inside: avoid; } }
